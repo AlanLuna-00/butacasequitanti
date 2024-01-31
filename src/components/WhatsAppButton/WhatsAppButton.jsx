@@ -7,7 +7,8 @@ const WhatsAppButton = () => {
       "Mensaje enviado desde la web:\nHola, estoy interesado en obtener informacion";
 
     // Lógica para abrir el enlace de WhatsApp con el mensaje predefinido
-    const url = "https://wa.me/1153477549?text=" + encodeURIComponent(mensaje);
+    const url =
+      "https://wa.me/+5491153477549?text=" + encodeURIComponent(mensaje);
 
     // Abrir enlace en una nueva ventana
     window.open(url, "_blank");
