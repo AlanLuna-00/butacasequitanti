@@ -1,12 +1,12 @@
-.carousel-container{
-    margin: 20px 0px;
-
+.carousel-container {
+  margin: 20px 0px;
 }
 
-.carousel-img{
-    width: 100%;
-    height: 500px;
-    padding: 0;
-    margin: 0;
-    object-fit: cover;
+.carousel-img {
+  width: 100%;
+  height: 500px;
+  padding: 0;
+  margin: 0;
+  /* que ocupe espacio disponible sin romperse el aspect/ratio */
+  object-fit: cover;
 }
