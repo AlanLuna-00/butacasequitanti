@@ -1,9 +1,17 @@
 .clientes-container {
-    max-width: 1000px;
-    margin: 20px auto;
+  max-width: 1000px;
+  margin: 20px auto;
 }
 
-.clientes-container img{
-    height: 90px;
-    margin: 10px 30px;
+.clientes-container img {
+  height: 90px;
+  margin: 10px 30px;
+}
+
+/* responsive with mediaqueries */
+@media (max-width: 1050px) {
+  .clientes-container img {
+    height: 60px;
+    margin: 10px 20px;
+  }
 }
