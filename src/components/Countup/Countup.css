@@ -1,0 +1,55 @@
+.countup-container {
+    background-color: #f8f8f8;
+    height: auto;
+    margin-top: 30px;
+    padding: 40px 0;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+    background: url('../../../public/images/filas-asientos-rojos-teatro-black.jpg') center/cover no-repeat;
+}
+
+.countup-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 10px auto 70px auto;
+    max-width: 1000px;
+    color: white
+}
+
+.countup-cards-container {
+    display: flex;
+}
+
+.countup-cards {
+    margin: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.countup-cards img {
+    filter: invert(90%);
+    width: 80px;
+    margin: 10px auto;
+}
+
+.countup-card {
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+}
+
+.countup-text {
+    margin: 25px 10px 20px 10px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+@media (max-width: 800px) {
+    .countup-cards-container {
+        display: block;
+    }
+
+    .countup-text {
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+}

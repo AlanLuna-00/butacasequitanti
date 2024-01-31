@@ -1,0 +1,28 @@
+.whatsapp-button {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+
+    background-color: #25d366;
+    color: #fff;
+    
+    width: auto;
+    padding: 0.2rem ;
+    border-radius: 9999px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Sombra con desplazamiento X, desplazamiento Y, desenfoque y color */
+
+}
+
+.whatsapp-icon {
+    display: inline;
+    width: 3rem;
+    height: auto;
+    border-radius: 50%;
+  }
+  

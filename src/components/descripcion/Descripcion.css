@@ -1,0 +1,52 @@
+.descripcion-container {
+    display: flex;
+    margin: 10px auto 70px auto;
+    max-width: 1000px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    /* Sombra con desplazamiento X, desplazamiento Y, desenfoque y color */
+}
+
+.descripcion-div-img {
+    flex: 1;
+}
+
+.descripcion-div-img img {
+    width: 100%;
+    background-image: cover;
+}
+
+.descripcion-text {
+    flex: 1;
+    text-align: center;
+    padding: 5px 10px 15px 10px;
+    background-color: rgb(245, 245, 245);
+    font-size: 17px;
+    line-height: 1.3;
+}
+
+.descripcion-text h3 {
+    margin-top: 15px;
+}
+
+.descripcion-text p {
+    margin-top: 25px;
+    text-align: start;
+    font-weight: 300;
+}
+
+@media (max-width: 830px) {
+    .descripcion-container {
+        display: block;
+        margin: 10px 10px;
+    }
+
+    .descripcion-text {
+        padding: 20px 2% 20px 2%;
+    }
+
+    .descripcion-text p {
+        text-align: center;
+        margin: 20px auto;
+
+    }
+}

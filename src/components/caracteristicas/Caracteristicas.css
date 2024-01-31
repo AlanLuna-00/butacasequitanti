@@ -1,0 +1,42 @@
+.caracteristicas-container {
+    display: flex;
+    height: auto;
+    width: auto;
+    margin: 10px auto 20px auto;
+    max-width: 1000px;
+}
+
+.caracteristica--butaca{
+    text-align: center;
+    margin: 10px 10px 25px 10px ;
+}
+
+.caracteristica--img{
+    width: 120px;
+    height: auto;
+}
+
+.caracteristica--butaca:hover{
+    transition: transform 0.4s ease;
+    transform: scale(1.05);
+}
+
+.caracteristica--title{
+    display: block;
+    margin-bottom: 20px;
+}
+.caracteristica--title:hover{
+    color: tomato;
+    transition: color 0.3s ease;
+}
+
+.caracteristica--descripcion{
+    font-weight: 300;
+    color: black;
+}
+
+@media (max-width: 700px) {
+    .caracteristicas-container{
+        display: block;
+    }
+}

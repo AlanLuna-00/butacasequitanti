@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.banner-container {
+  position: relative;
+  text-align: center;
+}
+
+/* Estilos para la imagen del banner */
+.img-banner {
+  width: 100%;
+}
+
+/* Estilos para el título en el banner */
+.title-frontImg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  /* Color del texto (ajusta según sea necesario) */
+}
+
+.app-carousel-container {
+  margin-top: 50px;
+}
+
+
+.line-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+hr {
+  border: 0;
+  /* Elimina el borde predeterminado */
+  width: 400px;
+  height: 1px;
+  /* Ajusta la altura de la línea */
+  background-color: #cacaca;
+  /* Color de fondo de la línea */
+  margin: 20px 0;
+  /* Ajusta el espacio antes y después del hr */
+}
+
+.title-menu {
+  text-align: center;
+  margin: 10px 20px;
+  white-space: nowrap;
+
+}
