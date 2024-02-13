@@ -31,7 +31,7 @@ export const Footer = () => {
         <div>
           <i className="fa fa-map-marker"></i>
           <p>
-            <span>Ramos Mejia</span> La Matanza, Buenos Aires
+            Ramos Mejia <span>La Matanza, Buenos Aires</span>
           </p>
         </div>
 
@@ -43,19 +43,45 @@ export const Footer = () => {
         <div>
           <i className="fa fa-envelope"></i>
           <p>
-            <a href="mailto:support@company.com">
+            <a
+              href="mailto:butacasequitanti@hotmail.com
+"
+            >
               butacasequitanti@hotmail.com
             </a>
           </p>
+        </div>
+        <div>
+          <a
+            href="https://www.instagram.com/butacasequitanti/"
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              textDecoration: "none",
+              color: "white",
+            }}
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg"
+              alt="instagram logo"
+              width="30px"
+              height="30px"
+              style={
+                // media query
+                window.matchMedia("(max-width: 600px)").matches
+                  ? { margin: "0" }
+                  : { margin: "0 0 0 30px" }
+              }
+            />
+          </a>
         </div>
       </div>
 
       <div className="footer-right">
         <p className="footer-company-about">
           <span>Nuestra compania</span>
-          EQUITANTI, desde 1942, líder en equipamiento para cines y teatros.
-          Tradición, calidad, innovación. Preferidos por las principales salas
-          del país.
+          Equipamiento para cines y teatros desde 1942. Calidad y servicio
+          líderes. Tapicería, butacas y más para disfrutar del arte.
         </p>
 
         {/* <div className="footer-icons">

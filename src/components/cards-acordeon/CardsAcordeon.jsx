@@ -18,6 +18,9 @@ import ave3 from "../../assets/teatros/avenida/ave3.webp";
 import regi1 from "../../assets/teatros/regina/regi1.jpeg";
 import regi2 from "../../assets/teatros/regina/regi2.jpeg";
 import regi3 from "../../assets/teatros/regina/regi3.jpeg";
+import colo1 from "../../assets/teatros/colonial/colo1.jpeg";
+import colo2 from "../../assets/teatros/colonial/colo2.jpeg";
+import colo3 from "../../assets/teatros/colonial/colo3.jpeg";
 
 export const CardsAcordeon = () => {
   const imagesData = [
@@ -58,10 +61,10 @@ export const CardsAcordeon = () => {
       images: [regi1, regi2, regi3],
     },
     {
-      title: "descripcion del trabajo 3",
+      title: "Av. Bartolomé Mitre 141, Avellaneda",
       descripcion:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero illo ratione odio asperiores eum magni ab nam qui voluptatem officia!",
-      images: [butacaCine, butacaCine, granrex_1],
+      images: [colo1, colo2, colo3],
     },
   ];
 
