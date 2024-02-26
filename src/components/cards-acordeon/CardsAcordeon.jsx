@@ -21,6 +21,7 @@ import regi3 from "../../assets/teatros/regina/regi3.jpeg";
 import colo1 from "../../assets/teatros/colonial/colo1.jpeg";
 import colo2 from "../../assets/teatros/colonial/colo2.jpeg";
 import colo3 from "../../assets/teatros/colonial/colo3.jpeg";
+import { useState } from "react";
 
 export const CardsAcordeon = () => {
   const imagesData = [
@@ -68,19 +69,45 @@ export const CardsAcordeon = () => {
     },
   ];
 
+  const [openDetails, setOpenDetails] = useState(false);
+
+  const toggleDetail = (index) => {
+    setOpenDetails((prevState) => ({
+      ...prevState,
+      [index]: !prevState[index],
+    }));
+  };
+
   return (
     <div className="card-acordeon-container">
       {imagesData.map(({ title, descripcion, images }, index) => (
-        <details className="card-acordeon__details" key={index}>
-          <summary className="card-acordeon__img-summary">
-            {/* Render the three images for each item */}
-            {images.map((image, imageIndex) => (
-              <img
-                key={imageIndex}
-                src={image}
-                alt={`image ${imageIndex + 1}`}
-              />
-            ))}
+        <details
+          className="card-acordeon__details"
+          key={index}
+          open={openDetails[index]}
+          onClick={() => toggleDetail(index)}
+        >
+          <summary className="">
+            <div className="card-acordeon__img-summary">
+              {images.map((image, imageIndex) => (
+                <img
+                  key={imageIndex}
+                  src={image}
+                  alt={`image ${imageIndex + 1}`}
+                />
+              ))}
+            </div>
+
+            <p
+              style={{
+                display: "block",
+                fontSize: "20px",
+                fontWeight: "bold",
+                marginLeft: "10px",
+              }}
+            >
+              {openDetails[index] ? "→" : "↓"}
+            </p>
           </summary>
           <div className="card-acordeon-container-text">
             <span className="title-card">{title}</span>
