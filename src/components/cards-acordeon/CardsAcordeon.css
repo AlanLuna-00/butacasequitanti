@@ -7,9 +7,7 @@
 .card-acordeon__details {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   /* Sombra con desplazamiento X, desplazamiento Y, desenfoque y color */
-  width: 1014px;
-  transition: 200ms;
-  list-style: none;
+  /* width: 1014px; */
   margin: 20px 0;
   /* background-color: aquamarine; */
 }
@@ -22,8 +20,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 200ms;
-  list-style: none;
   border: none;
 }
 
@@ -32,8 +28,8 @@
 }
 
 .card-acordeon__img-summary img {
-  width: 330px;
-  height: 230px;
+  width: 320px;
+  height: 240px;
   margin: 0 6px;
   object-fit: cover;
 }
@@ -72,9 +68,16 @@
 
   .card-acordeon__img-summary {
     display: block;
+    width: 100%;
   }
 
   .card-acordeon-container-text {
     width: auto;
   }
+}
+
+.card-acordeon__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

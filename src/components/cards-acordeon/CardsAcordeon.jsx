@@ -23,6 +23,42 @@ import colo2 from "../../assets/teatros/colonial/colo2.jpeg";
 import colo3 from "../../assets/teatros/colonial/colo3.jpeg";
 import { useState } from "react";
 
+function VscFoldUp(props) {
+  return (
+    <svg
+      stroke="currentColor"
+      fill="currentColor"
+      strokeWidth={0}
+      viewBox="0 0 16 16"
+      height="1em"
+      width="1em"
+      {...props}
+    >
+      <path d="M1 7.4l.7.7 6-6 6 6 .7-.7L8.1 1h-.7L1 7.4zm0 6l.7.7 6-6 6 6 .7-.7L8.1 7h-.7L1 13.4z" />
+    </svg>
+  );
+}
+
+function VscFoldDown(props) {
+  return (
+    <svg
+      stroke="currentColor"
+      fill="currentColor"
+      strokeWidth={0}
+      viewBox="0 0 16 16"
+      height="1em"
+      width="1em"
+      {...props}
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M14.207 1.707L13.5 1l-6 6-6-6-.707.707 6.353 6.354h.708l6.353-6.354zm0 6L13.5 7l-6 6-6-6-.707.707 6.353 6.354h.708l6.353-6.354z"
+      />
+    </svg>
+  );
+}
+
 export const CardsAcordeon = () => {
   const imagesData = [
     {
@@ -69,7 +105,7 @@ export const CardsAcordeon = () => {
     },
   ];
 
-  const [openDetails, setOpenDetails] = useState(false);
+  const [openDetails, setOpenDetails] = useState({});
 
   const toggleDetail = (index) => {
     setOpenDetails((prevState) => ({
@@ -81,19 +117,18 @@ export const CardsAcordeon = () => {
   return (
     <div className="card-acordeon-container">
       {imagesData.map(({ title, descripcion, images }, index) => (
-        <details
-          className="card-acordeon__details"
-          key={index}
-          open={openDetails[index]}
-          onClick={() => toggleDetail(index)}
-        >
-          <summary className="">
+        <div className="card-acordeon__item" key={index}>
+          <div
+            className="card-acordeon__summary"
+            onClick={() => toggleDetail(index)}
+          >
             <div className="card-acordeon__img-summary">
               {images.map((image, imageIndex) => (
                 <img
                   key={imageIndex}
                   src={image}
                   alt={`image ${imageIndex + 1}`}
+                  className="card-acordeon__img"
                 />
               ))}
             </div>
@@ -104,18 +139,21 @@ export const CardsAcordeon = () => {
                 fontSize: "20px",
                 fontWeight: "bold",
                 marginLeft: "10px",
+                marginTop: "10px",
               }}
             >
-              {openDetails[index] ? "→" : "↓"}
-            </p>
-          </summary>
-          <div className="card-acordeon-container-text">
-            <span className="title-card">{title}</span>
-            <p className="card-acordeon__description-text--hidden-paragraph">
-              {descripcion}
+              {openDetails[index] ? <VscFoldUp /> : <VscFoldDown />}
             </p>
           </div>
-        </details>
+          {openDetails[index] && (
+            <div className="card-acordeon-container-text">
+              <span className="title-card">{title}</span>
+              <p className="card-acordeon__description-text--hidden-paragraph">
+                {descripcion}
+              </p>
+            </div>
+          )}
+        </div>
       ))}
     </div>
   );
