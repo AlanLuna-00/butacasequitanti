@@ -11,11 +11,12 @@
 /* responsive with mediaqueries */
 @media (max-width: 1050px) {
   .clientes-container {
-    max-width: 1000px;
+    width: 70%;
     margin: 20px auto;
   }
   .clientes-container img {
     height: 60px;
-    margin: 10px auto;
+    margin: 10px 10px;
+    border-radius: 10px;
   }
 }
