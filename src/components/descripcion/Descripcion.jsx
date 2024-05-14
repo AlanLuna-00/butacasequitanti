@@ -13,7 +13,7 @@ export const Descripcion = () => {
         <div className="descripcion-text">
           <p>
             <strong>
-              Desde 1942, EQUITANTI no es solo una empresa; es una tradición
+              Desde 1942, Equitanti no es solo una empresa; es una tradición
               arraigada.
             </strong>{" "}
             Nos dedicamos con pasión a la producción, distribución y
@@ -24,7 +24,7 @@ export const Descripcion = () => {
           </p>
           <p>
             <strong>
-              EQUITANTI es una marca registrada en las salas más prestigiosas de
+              Equitanti es una marca registrada en las salas más prestigiosas de
               la Argentina,
             </strong>{" "}
             un símbolo de calidad y un orgullo que trasciende generaciones. Con
